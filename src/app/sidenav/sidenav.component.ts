@@ -32,29 +32,24 @@ export class SidenavComponent implements OnInit {
   }
   navData = [
     {
-      routerLink: 'home',
+      routerLink: '/home',
       icon: 'ri-dashboard-line',
       label: 'Dashboard',
     },
     {
-      routerLink: 'development',
+      routerLink: '/tables',
       icon: 'ri-dashboard-line',
-      label: 'Development',
+      label: 'Tables',
     },
     {
-      routerLink: 'test',
+      routerLink: '/forms',
       icon: 'ri-dashboard-line',
-      label: 'Test',
+      label: 'Form',
     },
     {
-      routerLink: 'production',
+      routerLink: '/user',
       icon: 'ri-dashboard-line',
-      label: 'Production',
-    },
-    {
-      routerLink: 'setting',
-      icon: 'ri-dashboard-line',
-      label: 'Setting',
+      label: 'User',
     },
   ];
 

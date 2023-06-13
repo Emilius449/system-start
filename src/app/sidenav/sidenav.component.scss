@@ -74,17 +74,17 @@
         .sidenav-link-text {
           margin-left: 1.5rem;
         }
+        &.active {
+          background-color: white;
+          .sidenav-link-icon,
+          .sidenav-link-text {
+            color: black;
+          }
+        }
       }
       &:hover {
         .sidenav-nav-link {
           background-color: white;
-          color: black;
-        }
-      }
-      &.active {
-        background-color: white;
-        .sidenav-link-icon,
-        .sidenav-link-text {
           color: black;
         }
       }

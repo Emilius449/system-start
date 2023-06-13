@@ -15,9 +15,44 @@ const routes: Routes = [
       {
         path: '',
         loadComponent: () =>
-          import('./dashboard/dashboard.component').then(
+          import('./modules/dashboard/dashboard.component').then(
             (mod) => mod.DashboardComponent
           ),
+      },
+    ],
+  },
+  // Export as default route
+  {
+    path: 'tables',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./modules/tables/tables.routes'),
+      },
+    ],
+  },
+  // Exported as const
+  {
+    path: 'forms',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./modules/forms/forms.routes').then(
+            (mod) => mod.ROUTES_FORMS
+          ),
+      },
+    ],
+  },
+  {
+    path: 'user',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./modules/user/user.routes'),
       },
     ],
   },
