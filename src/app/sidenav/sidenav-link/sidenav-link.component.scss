@@ -1,0 +1,35 @@
+.sidenav-nav-link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: #f3f3f3;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+  .sidenav-link-icon {
+    font-size: 22px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 0.5rem;
+    text-align: center;
+  }
+  .sidenav-link-text {
+    margin-left: 1.5rem;
+  }
+  .expanded {
+    margin-left: auto;
+    font-size: 32;
+  }
+  &:hover {
+    background-color: var(--bg-btn-hover);
+  }
+  &.active {
+    background-color: white;
+    box-shadow: var(--btn-active-box-shadow);
+    .sidenav-link-icon,
+    .sidenav-link-text {
+      color: black;
+    }
+  }
+}

@@ -8,11 +8,8 @@
     </div>
     <ul class="sidenav-nav">
         <li class="sidenav-nav-item" *ngFor="let item of navData">
-            <a class="sidenav-nav-link" [routerLink]="[item.routerLink]" routerLinkActive="active"
-                [routerLinkActiveOptions]="{exact:true}">
-                <i class="sidenav-link-icon" [ngClass]="item.icon"></i>
-                <span class="sidenav-link-text" *ngIf="!collapsed">{{item.label}}</span>
-            </a>
+            <app-sidenav-link [item]="item"></app-sidenav-link>
+
         </li>
     </ul>
 </div>

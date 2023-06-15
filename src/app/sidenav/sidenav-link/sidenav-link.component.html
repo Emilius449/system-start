@@ -1,0 +1,22 @@
+<a class="sidenav-nav-link" [ngStyle]="{'padding-left': (depth * 12) + 'px'}" (click)="onItemSelected(item)"
+    [routerLink]="[item.routerLink??'']"
+    [ngClass]="{'active': item.routerLink ? router.isActive(item.routerLink, true): false, 'expanded': expanded}">
+    <i class="sidenav-link-icon" [ngClass]="item.icon"></i>
+    <span class="sidenav-link-text" *ngIf="!collapsed">{{item.label}}</span>
+    <i *ngIf="item?.children && item.children?.length" class="expanded"
+        [@rotateAnimation]="expanded ? 'expanded': 'collapsed'">
+        &#x2708;
+    </i>
+</a>
+<div *ngIf="expanded" [@slideInOutAnimation]>
+    <app-sidenav-link *ngFor="let child of item.children" [item]="child" [depth]="depth+1">
+    </app-sidenav-link>
+</div>
+<!-- 
+                <a class="sidenav-nav-link" [routerLink]="[item.routerLink]" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}">
+                <i class="sidenav-link-icon" [ngClass]="item.icon"></i>
+                <span class="sidenav-link-text" *ngIf="!collapsed">{{item.label}}</span>
+                <i *ngIf="item?.children && item.children?.length" class="expanded" [ngClass]="">&#x2708;</i>
+            </a>
+        -->

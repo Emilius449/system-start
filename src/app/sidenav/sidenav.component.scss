@@ -1,5 +1,6 @@
 .sidenav {
-  background-color: rgb(75, 75, 75);
+  font-weight: 200;
+  background-color: var(--bg-primary);
   transition: all 0.3s ease;
   position: fixed;
   top: 0;
@@ -9,11 +10,13 @@
   height: 100dvh;
   box-shadow: 0.063rem 0 1.25rem 0 rgb(146, 146, 146);
   .logo-container {
+    position: relative;
     display: flex;
     align-items: center;
     // gap: 5px;
-    padding: 0.938rem 0.938rem 0 0.938rem;
+    padding: 0.938rem;
     width: 100%;
+    margin-bottom: 3px;
     .logo {
       background-color: white;
       text-align: center;
@@ -43,6 +46,13 @@
       font-size: 24px;
       color: white;
     }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: calc(100% - 1.876rem);
+      border-bottom: 1px solid var(--color-divider);
+    }
   }
   .sidenav-nav {
     list-style: none;
@@ -55,39 +65,6 @@
     .sidenav-nav-item {
       width: 100%;
       margin-bottom: 0.625rem;
-      .sidenav-nav-link {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        height: 3rem;
-        color: #f3f3f3;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border-radius: 0.625rem;
-        .sidenav-link-icon {
-          font-size: 22px;
-          width: 2rem;
-          min-width: 2rem;
-          margin: 0 0.5rem;
-          text-align: center;
-        }
-        .sidenav-link-text {
-          margin-left: 1.5rem;
-        }
-        &.active {
-          background-color: white;
-          .sidenav-link-icon,
-          .sidenav-link-text {
-            color: black;
-          }
-        }
-      }
-      &:hover {
-        .sidenav-nav-link {
-          background-color: white;
-          color: black;
-        }
-      }
     }
   }
 }

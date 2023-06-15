@@ -1,10 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,900&display=swap");
-
-:root {
-  --sidebar-width: 16.5625rem;
-  --sidebar-width-collapsed: 5rem;
-}
+@use "./assets/scss/main.scss";
 
 * {
   margin: 0;
@@ -14,5 +9,4 @@
 
 body {
   position: relative;
-  font-family: "Roboto", sans-serif;
 }
