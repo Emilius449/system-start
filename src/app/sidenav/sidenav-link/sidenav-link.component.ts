@@ -1,22 +1,17 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  HostBinding,
+  EventEmitter,
   Input,
   OnChanges,
+  Output,
   SimpleChanges,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  trigger,
-  state,
-  style,
-  transition,
-  animate,
-} from '@angular/animations';
 import { Router, RouterModule } from '@angular/router';
 import { slideInOut } from 'src/app/shared/animation/slide-in-out.animation';
 import { ROTATE } from 'src/app/shared/animation/rotate.animation';
+import { SideNavLink } from '../sidenav.model';
 
 @Component({
   selector: 'app-sidenav-link',
@@ -28,34 +23,28 @@ import { ROTATE } from 'src/app/shared/animation/rotate.animation';
   animations: [ROTATE, slideInOut],
 })
 export class SidenavLinkComponent implements OnChanges {
-  expanded = false;
-  @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
   @Input() item: any;
   @Input() depth = 0;
-  @Input() collapsed = false;
+  @Input() collapsed!: boolean;
+  @Input() expanded!: boolean;
+  @Output() itemSelected = new EventEmitter<SideNavLink>();
 
   constructor(public router: Router) {}
   ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
+    // console.log(this.item);
   }
-  // ngOnInit() {
-  // this.selectRouterDetails = this.store.pipe(select(selectRouterState));
-  // this.selectRouterDetails.subscribe((routerState: any) => {
-  //   const url: any = routerState.state.url;
-  //   if (this.item.route && url) {
-  //     this.expanded = url.indexOf(`/${this.item.route}`) === 0;
-  //     this.ariaExpanded = this.expanded;
-  //   }
-  // });
-  // }
-  onItemSelected(item: any) {
-    if (!item.children || !item.children.length) {
-      // this.router.navigate([item.route]);
-      // this.sidebarService.closeNav();
-    }
-    if (item.children && item.children.length) {
-      this.expanded = !this.expanded;
-    }
+  onItemSelected(item: SideNavLink) {
+    this.itemSelected.emit(item);
+
+    // if (this.item?.children && this.item?.children?.length) {
+    //   for (let modelItem of this.item.children) {
+    //     if (item !== modelItem && modelItem.expanded) {
+    //       modelItem.expanded = false;
+    //     }
+    //   }
+    // }
+    // item.expanded = !item.expanded;
+    // console.log('No Children', this.expanded);
+    // console.log('item', item);
   }
 }

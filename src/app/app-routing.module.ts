@@ -3,59 +3,56 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-  {
+  /*  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'home',
-  },
+  }, */
   {
-    path: 'home',
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: '',
+        path: 'home',
         loadComponent: () =>
           import('./modules/dashboard/dashboard.component').then(
             (mod) => mod.DashboardComponent
           ),
       },
-    ],
-  },
-  // Export as default route
-  {
-    path: 'tables',
-    component: LayoutComponent,
-    children: [
       {
-        path: '',
+        path: 'tables',
         loadChildren: () => import('./modules/tables/tables.routes'),
       },
-    ],
-  },
-  // Exported as const
-  {
-    path: 'forms',
-    component: LayoutComponent,
-    children: [
       {
-        path: '',
+        path: 'forms',
         loadChildren: () =>
           import('./modules/forms/forms.routes').then(
             (mod) => mod.ROUTES_FORMS
           ),
       },
-    ],
-  },
-  {
-    path: 'user',
-    component: LayoutComponent,
-    children: [
       {
-        path: '',
+        path: 'user',
         loadChildren: () => import('./modules/user/user.routes'),
       },
     ],
   },
+  // Export as default route
+  // Exported as const
+  // {
+  //   path: 'tables',
+  //   component: LayoutComponent,
+  //   children: [],
+  // },
+  // {
+  //   path: 'forms',
+  //   component: LayoutComponent,
+  //   children: [],
+  // },
+  // {
+  //   path: 'user',
+  //   component: LayoutComponent,
+  //   children: [],
+  // },
 ];
 
 @NgModule({

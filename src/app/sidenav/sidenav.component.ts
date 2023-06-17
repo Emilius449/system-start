@@ -1,12 +1,17 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   HostListener,
+  OnChanges,
   OnInit,
   Output,
+  SimpleChanges,
+  WritableSignal,
+  signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SideNavToggle } from './sidenav.model';
+import { SideNavLink, SideNavToggle } from './sidenav.model';
 import { SidenavLinkComponent } from './sidenav-link/sidenav-link.component';
 
 @Component({
@@ -15,8 +20,9 @@ import { SidenavLinkComponent } from './sidenav-link/sidenav-link.component';
   imports: [CommonModule, SidenavLinkComponent],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent {
   collapsed = false;
   screenWidth = 0;
   @Output() onToggleSidenav = new EventEmitter<SideNavToggle>();
@@ -30,14 +36,14 @@ export class SidenavComponent implements OnInit {
       });
     }
   }
-  navData = [
+  navData = signal<SideNavLink[]>([
     {
       routerLink: '/home',
       icon: 'ri-dashboard-line',
       label: 'Dashboard',
     },
     {
-      routerLink: '/',
+      routerLink: '/tables/#',
       icon: 'ri-dashboard-line',
       label: 'Tables',
       children: [
@@ -75,15 +81,7 @@ export class SidenavComponent implements OnInit {
       icon: 'ri-dashboard-line',
       label: 'User',
     },
-  ];
-
-  ngOnInit(): void {
-    this.screenWidth = window.innerWidth;
-    this.onToggleSidenav.emit({
-      collapsed: this.collapsed,
-      screenWidth: this.screenWidth,
-    });
-  }
+  ]);
   toggleCollapse(): void {
     this.collapsed = !this.collapsed;
     this.onToggleSidenav.emit({
@@ -97,5 +95,13 @@ export class SidenavComponent implements OnInit {
       collapsed: this.collapsed,
       screenWidth: this.screenWidth,
     });
+  }
+  itemSelected(item: SideNavLink): void {
+    this.navData.update((value) =>
+      value.map((element) => ({
+        ...element,
+        expanded: item?.routerLink != element?.routerLink ? false : true,
+      }))
+    );
   }
 }
