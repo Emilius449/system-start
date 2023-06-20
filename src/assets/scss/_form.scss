@@ -1,0 +1,22 @@
+.form-control {
+  display: grid;
+  margin-bottom: 16px;
+  label {
+  }
+  input {
+    line-height: 1.2;
+    padding: 10px 10px;
+    border-color: var(--color-gray-100);
+    outline: none;
+    margin-top: 5px;
+    border-style: solid;
+    border-radius: 4.5px;
+    border-width: 1px;
+    font-size: var(--fs);
+    font-family: inherit;
+    font-weight: inherit;
+    &.ng-touched.ng-invalid {
+      border-color: var(--color-danger);
+    }
+  }
+}

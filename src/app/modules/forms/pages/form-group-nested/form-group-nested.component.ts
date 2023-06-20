@@ -3,42 +3,32 @@ import { CommonModule } from '@angular/common';
 import {
   FormGroup,
   FormControl,
-  FormArray,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import { UtilityService } from 'src/app/shared/service/utility.service';
 
 @Component({
-  selector: 'app-form-array',
+  selector: 'app-form-group-nested',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './form-array.component.html',
-  styleUrls: ['./form-array.component.scss'],
+  templateUrl: './form-group-nested.component.html',
+  styleUrls: ['./form-group-nested.component.scss'],
 })
-export class FormArrayComponent {
-  addressFormGroup = new FormGroup({
-    street: new FormControl(''),
-    city: new FormControl(''),
-  });
-
+export class FormGroupNestedComponent {
   form = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
-    address: new FormArray([this.addressFormGroup]),
+    address: new FormGroup({
+      street: new FormControl('', Validators.required),
+      city: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(20),
+      ]),
+    }),
   });
 
   constructor(private utilityService: UtilityService) {}
-
-  get address() {
-    return this.form.get('address') as FormArray;
-  }
-
-  addAddress() {
-    this.address.push(this.addressFormGroup);
-  }
-  removeAddree(index: number) {
-    this.address.removeAt(index);
-  }
   onSubmit() {
     console.log('Form Value: ', this.form.value);
     if (this.form.valid) {

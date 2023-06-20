@@ -1,5 +1,8 @@
 @use "./root";
 @use "./fonts";
+@use "./form";
+@use "./button";
+@use "./helper";
 
 body {
   font-family: "montserrat";

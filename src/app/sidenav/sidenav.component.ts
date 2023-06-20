@@ -70,6 +70,11 @@ export class SidenavComponent {
           label: 'Form Group',
         },
         {
+          routerLink: '/forms/form-group-nested',
+          icon: 'ri-dashboard-line',
+          label: 'Form Group Nested',
+        },
+        {
           routerLink: '/forms/form-array',
           icon: 'ri-dashboard-line',
           label: 'Form Array',

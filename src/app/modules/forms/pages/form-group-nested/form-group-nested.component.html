@@ -7,9 +7,18 @@
         <label for="lastName">Last Name</label>
         <input type="text" id="lastName" formControlName="lastName" />
     </div>
-    <div class="form-control">
-        <label for="email">Email</label>
-        <input type="email" id="email" formControlName="email" />
+    <div formGroupName="address">
+        <h3>Address</h3>
+
+        <div class="form-control">
+            <label for="street">Street: </label>
+            <input id="street" type="text" formControlName="street">
+        </div>
+
+        <div class="form-control">
+            <label for="city">City: </label>
+            <input id="city" type="text" formControlName="city">
+        </div>
     </div>
     <button class="btn btn-primary ms-auto" type="submit">Submit</button>
 </form>

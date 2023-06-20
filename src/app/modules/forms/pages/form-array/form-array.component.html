@@ -1,1 +1,30 @@
-<p>form-array works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" formControlName="firstName" />
+    </div>
+    <div class="form-control">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" formControlName="lastName" />
+    </div>
+    <div formArrayName="address">
+        <h3>Address</h3>
+        <button type="button" (click)="addAddress()" class="btn">+ Add Address</button>
+        <ng-container *ngFor="let item of address.controls; let i=index">
+            <div [formGroupName]="i">
+                <h5>Address {{i+1 | number:'2.0-0'}}</h5>
+                <div class="form-control">
+                    <label for="street">Street: </label>
+                    <input id="street" type="text" formControlName="street">
+                </div>
+
+                <div class="form-control">
+                    <label for="city">City: </label>
+                    <input id="city" type="text" formControlName="city">
+                </div>
+                <button class="btn btn-primary ms-auto" type="button" (click)="removeAddree(i)">Remove Address</button>
+            </div>
+        </ng-container>
+    </div>
+    <button class="btn btn-primary ms-auto" type="submit">Submit</button>
+</form>
