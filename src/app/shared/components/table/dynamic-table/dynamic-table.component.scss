@@ -1,0 +1,36 @@
+table {
+  tr.mat-mdc-row {
+    // border-radius: 2px;
+    // background-color: rgba(255, 255, 255, 0.75);
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+      //   background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+      transform: scale(1.002) !important;
+    }
+
+    td.mat-mdc-cell {
+      vertical-align: middle !important;
+      padding-left: 8px !important; // Considering Sort Icon
+      padding-right: 8px !important;
+
+      &.mat-column-sn,
+      &.mat-column-rnum,
+      &.mat-column-useSeq,
+      &.mat-column-radio {
+        width: 6rem;
+      }
+      &.mat-column-sn,
+      &.mat-column-itemNumber,
+      &.mat-column-rnum,
+      &.mat-column-radio,
+      &.mat-column-useSeq,
+      &.mat-column-actions {
+        text-align: center;
+      }
+    }
+  }
+}

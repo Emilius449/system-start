@@ -1,1 +1,15 @@
-<p>table-basic works!</p>
+<app-dynamic-table [tableColumns]="tableColumns" [tableData]="tableList$ | async">
+    <app-table-action actionName="securityNo" [templateRef]="securityNo"></app-table-action>
+    <app-table-action actionName="tin" [templateRef]="tin"></app-table-action>
+    <app-table-action actionName="securityAmt" [templateRef]="securityAmt"></app-table-action>
+</app-dynamic-table>
+<ng-template #securityNo let-data="data">
+    <a class="tesws-href"
+        [routerLink]="[ '/cfa-reference-info/tin/security-list', data.securityTypeCd,data.securitySerialNo,data.securityYear,data.securityNo ]">{{data.securityNo}}</a>
+</ng-template>
+<ng-template #tin let-data="data">
+    <p>{{data.tin}}</p>
+</ng-template>
+<ng-template #securityAmt let-data="data">
+    <p class="text-right">{{data.securityAmt | number : '1.2-2'}}</p>
+</ng-template>

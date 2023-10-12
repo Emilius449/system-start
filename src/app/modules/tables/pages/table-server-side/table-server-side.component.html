@@ -1,1 +1,11 @@
 <p>table-server-side works!</p>
+
+
+<app-dynamic-table [tableColumns]="tableColumns" [tableData]="tableData$ | async" [totalItems]="length"
+    (paginationEvent)="paginationEvent($event)" [serverPagination]="true">
+    <app-table-action actionName="viewMore" [templateRef]="viewMore"></app-table-action>
+    <ng-template #viewMore let-data="data">
+        <button mat-raised-button class="tesws-btn tesws-btn-grey" (click)="viewBillDetails(data)">
+            More Details</button>
+    </ng-template>
+</app-dynamic-table>
