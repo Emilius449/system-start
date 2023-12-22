@@ -9,11 +9,12 @@ import {
 import { CommonModule } from '@angular/common';
 import { SideNavLink, SideNavToggle } from './sidenav.model';
 import { SidenavLinkComponent } from './sidenav-link/sidenav-link.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [CommonModule, SidenavLinkComponent],
+  imports: [CommonModule, SidenavLinkComponent, MatIconModule],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -35,12 +36,12 @@ export class SidenavComponent {
   navData = signal<SideNavLink[]>([
     {
       routerLink: '/home',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_dashboard',
       label: 'Dashboard',
     },
     {
       routerLink: '/email/#',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_mail',
       label: 'Email',
       children: [
         {
@@ -62,12 +63,12 @@ export class SidenavComponent {
     },
     {
       routerLink: '/chats',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_chat',
       label: 'Chat',
     },
     {
       routerLink: '/advanced-ui/#',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_stack',
       label: 'Advanced UI',
       children: [
         {
@@ -84,49 +85,49 @@ export class SidenavComponent {
     },
     {
       routerLink: '/forms',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_file_text',
       label: 'Form',
       children: [
         {
           routerLink: '/forms/form-group',
-          icon: 'ri-dashboard-line',
+          icon: '',
           label: 'Form Group',
         },
         {
           routerLink: '/forms/form-group-nested',
-          icon: 'ri-dashboard-line',
+          icon: '',
           label: 'Form Group Nested',
         },
         {
           routerLink: '/forms/form-array',
-          icon: 'ri-dashboard-line',
+          icon: '',
           label: 'Form Array',
         },
         {
           routerLink: '/forms/form-wizard',
-          icon: 'ri-dashboard-line',
+          icon: '',
           label: 'Form Wizard',
         },
         {
           routerLink: '/forms/form-validation',
-          icon: 'ri-dashboard-line',
+          icon: '',
           label: 'Form Validation',
         },
         {
           routerLink: '/forms/form-mask',
-          icon: 'ri-dashboard-line',
+          icon: '',
           label: 'Form Mask',
         },
       ],
     },
     {
       routerLink: '/editor',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_text_block',
       label: 'Editor',
     },
     {
       routerLink: '/charts-graphs/#',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_pie_chart',
       label: 'Charts & Graphs',
       children: [
         {
@@ -143,7 +144,7 @@ export class SidenavComponent {
     },
     {
       routerLink: '/tables/#',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_table',
       label: 'Tables',
       children: [
         {
@@ -160,12 +161,12 @@ export class SidenavComponent {
     },
     {
       routerLink: '/icons',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_location',
       label: 'Icons',
     },
     {
       routerLink: '/special-pages/#',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_pages',
       label: 'Special Pages',
       children: [
         {
@@ -187,7 +188,7 @@ export class SidenavComponent {
     },
     {
       routerLink: '/authentication/#',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_lock',
       label: 'Authentication',
       children: [
         {
@@ -204,7 +205,7 @@ export class SidenavComponent {
     },
     {
       routerLink: '/error-page/#',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_spam',
       label: 'Error Page',
       children: [
         {
@@ -221,7 +222,7 @@ export class SidenavComponent {
     },
     {
       routerLink: '/user',
-      icon: 'ri-dashboard-line',
+      icon: 'm_tech_profile',
       label: 'User',
     },
   ]);

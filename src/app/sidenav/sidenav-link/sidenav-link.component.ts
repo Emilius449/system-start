@@ -12,11 +12,12 @@ import { Router, RouterModule } from '@angular/router';
 import { slideInOut } from 'src/app/shared/animation/slide-in-out.animation';
 import { ROTATE } from 'src/app/shared/animation/rotate.animation';
 import { SideNavLink } from '../sidenav.model';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-sidenav-link',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatIconModule],
   templateUrl: './sidenav-link.component.html',
   styleUrls: ['./sidenav-link.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,1 +1,6 @@
-<p>icons works!</p>,
+<p>icons works!</p>
+@for (icon of icons; track $index) {
+<p>
+    <mat-icon [svgIcon]="icon"></mat-icon> {{icon}}
+</p>
+}

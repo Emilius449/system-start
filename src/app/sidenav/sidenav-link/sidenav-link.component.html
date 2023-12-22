@@ -1,18 +1,18 @@
 <ng-container *ngIf="item?.children && item.children?.length ; else elseHasNoChildren">
     <a class="sidenav-nav-link" [ngStyle]="{'padding-left': (depth * 12) + 'px'}" (click)="onItemSelected(item)"
         [ngClass]="{'active': item.routerLink ? router.isActive(item.routerLink, true): false, 'expanded': expanded}">
-        <i class="sidenav-link-icon" [ngClass]="item.icon"></i>
+        <mat-icon class="sidenav-link-icon" [svgIcon]="item.icon"></mat-icon>
         <span class="sidenav-link-text" *ngIf="!collapsed">{{item.label}}</span>
         <i *ngIf="item?.children && item.children?.length && !collapsed" class="expanded"
             [@rotateAnimation]="item?.expanded ? 'expanded': 'collapsed'">
-            &#x2708;
+            <mat-icon svgIcon="m_tech_arrow_drop_down"></mat-icon>
         </i>
     </a>
 </ng-container>
 <ng-template #elseHasNoChildren>
     <a class="sidenav-nav-link" [ngStyle]="{'padding-left': (depth * 12) + 'px'}" (click)="onItemSelected(item)"
         [routerLink]="[item.routerLink??'']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-        <i class="sidenav-link-icon" [ngClass]="item.icon"></i>
+        <mat-icon class="sidenav-link-icon" [svgIcon]="item.icon"></mat-icon>
         <span class="sidenav-link-text" *ngIf="!collapsed">{{item.label}}</span>
     </a>
 </ng-template>
