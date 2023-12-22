@@ -61,7 +61,7 @@ export class SidenavComponent {
       ],
     },
     {
-      routerLink: '/chat',
+      routerLink: '/chats',
       icon: 'ri-dashboard-line',
       label: 'Chat',
     },
@@ -76,9 +76,9 @@ export class SidenavComponent {
           label: 'Carousel',
         },
         {
-          routerLink: '/advanced-ui/alert',
+          routerLink: '/advanced-ui/alerts',
           icon: '',
-          label: 'Alert',
+          label: 'Alerts',
         },
       ],
     },
@@ -120,9 +120,9 @@ export class SidenavComponent {
       ],
     },
     {
-      routerLink: '/editors',
+      routerLink: '/editor',
       icon: 'ri-dashboard-line',
-      label: 'Editors',
+      label: 'Editor',
     },
     {
       routerLink: '/charts-graphs/#',
@@ -130,12 +130,12 @@ export class SidenavComponent {
       label: 'Charts & Graphs',
       children: [
         {
-          routerLink: '/charts-graphs/apexcharts',
+          routerLink: '/charts-graphs/apex-charts',
           icon: '',
           label: 'Apex Charts',
         },
         {
-          routerLink: '/charts-graphs/chartjs',
+          routerLink: '/charts-graphs/chart-js',
           icon: '',
           label: 'Chart Js',
         },

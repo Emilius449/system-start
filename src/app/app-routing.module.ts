@@ -20,8 +20,19 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'tables',
-        loadChildren: () => import('./modules/tables/tables.routes'),
+        path: 'email',
+        loadChildren: () => import('./modules/email/email.routes'),
+      },
+      {
+        path: 'chats',
+        loadComponent: () =>
+          import('./modules/chats/chats.component').then(
+            (comp) => comp.ChatsComponent
+          ),
+      },
+      {
+        path: 'advanced-ui',
+        loadChildren: () => import('./modules/advanced-ui/advanced-ui.routes'),
       },
       {
         path: 'forms',
@@ -29,6 +40,43 @@ const routes: Routes = [
           import('./modules/forms/forms.routes').then(
             (mod) => mod.ROUTES_FORMS
           ),
+      },
+      {
+        path: 'editor',
+        loadComponent: () =>
+          import('./modules/editor/editor.component').then(
+            (comp) => comp.EditorComponent
+          ),
+      },
+      {
+        path: 'charts-graphs',
+        loadChildren: () =>
+          import('./modules/charts-graphs/charts-graphs.routes'),
+      },
+      {
+        path: 'tables',
+        loadChildren: () => import('./modules/tables/tables.routes'),
+      },
+      {
+        path: 'icons',
+        loadComponent: () =>
+          import('./modules/icons/icons.component').then(
+            (comp) => comp.IconsComponent
+          ),
+      },
+      {
+        path: 'special-pages',
+        loadChildren: () =>
+          import('./modules/special-pages/special-pages.routes'),
+      },
+      {
+        path: 'authentication',
+        loadChildren: () =>
+          import('./modules/authentication/authentication.routes'),
+      },
+      {
+        path: 'error-page',
+        loadChildren: () => import('./modules/error-page/error-page.routes'),
       },
       {
         path: 'user',
