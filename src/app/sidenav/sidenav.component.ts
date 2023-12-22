@@ -3,11 +3,7 @@ import {
   Component,
   EventEmitter,
   HostListener,
-  OnChanges,
-  OnInit,
   Output,
-  SimpleChanges,
-  WritableSignal,
   signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -43,19 +39,46 @@ export class SidenavComponent {
       label: 'Dashboard',
     },
     {
-      routerLink: '/tables/#',
+      routerLink: '/email/#',
       icon: 'ri-dashboard-line',
-      label: 'Tables',
+      label: 'Email',
       children: [
         {
-          routerLink: '/tables/basic',
+          routerLink: '/email/inbox',
           icon: '',
-          label: 'Basic',
+          label: 'Inbox',
         },
         {
-          routerLink: '/tables/server-side',
+          routerLink: '/email/read',
           icon: '',
-          label: 'Server Side',
+          label: 'Read',
+        },
+        {
+          routerLink: '/email/compose',
+          icon: '',
+          label: 'Compose',
+        },
+      ],
+    },
+    {
+      routerLink: '/chat',
+      icon: 'ri-dashboard-line',
+      label: 'Chat',
+    },
+    {
+      routerLink: '/advanced-ui/#',
+      icon: 'ri-dashboard-line',
+      label: 'Advanced UI',
+      children: [
+        {
+          routerLink: '/advanced-ui/carousel',
+          icon: '',
+          label: 'Carousel',
+        },
+        {
+          routerLink: '/advanced-ui/alert',
+          icon: '',
+          label: 'Alert',
         },
       ],
     },
@@ -78,6 +101,121 @@ export class SidenavComponent {
           routerLink: '/forms/form-array',
           icon: 'ri-dashboard-line',
           label: 'Form Array',
+        },
+        {
+          routerLink: '/forms/form-wizard',
+          icon: 'ri-dashboard-line',
+          label: 'Form Wizard',
+        },
+        {
+          routerLink: '/forms/form-validation',
+          icon: 'ri-dashboard-line',
+          label: 'Form Validation',
+        },
+        {
+          routerLink: '/forms/form-mask',
+          icon: 'ri-dashboard-line',
+          label: 'Form Mask',
+        },
+      ],
+    },
+    {
+      routerLink: '/editors',
+      icon: 'ri-dashboard-line',
+      label: 'Editors',
+    },
+    {
+      routerLink: '/charts-graphs/#',
+      icon: 'ri-dashboard-line',
+      label: 'Charts & Graphs',
+      children: [
+        {
+          routerLink: '/charts-graphs/apexcharts',
+          icon: '',
+          label: 'Apex Charts',
+        },
+        {
+          routerLink: '/charts-graphs/chartjs',
+          icon: '',
+          label: 'Chart Js',
+        },
+      ],
+    },
+    {
+      routerLink: '/tables/#',
+      icon: 'ri-dashboard-line',
+      label: 'Tables',
+      children: [
+        {
+          routerLink: '/tables/basic',
+          icon: '',
+          label: 'Basic',
+        },
+        {
+          routerLink: '/tables/server-side',
+          icon: '',
+          label: 'Server Side',
+        },
+      ],
+    },
+    {
+      routerLink: '/icons',
+      icon: 'ri-dashboard-line',
+      label: 'Icons',
+    },
+    {
+      routerLink: '/special-pages/#',
+      icon: 'ri-dashboard-line',
+      label: 'Special Pages',
+      children: [
+        {
+          routerLink: '/special-pages/invoice',
+          icon: '',
+          label: 'Invoice',
+        },
+        {
+          routerLink: '/special-pages/profile',
+          icon: '',
+          label: 'Profile',
+        },
+        {
+          routerLink: '/special-pages/timeline',
+          icon: '',
+          label: 'Timeline',
+        },
+      ],
+    },
+    {
+      routerLink: '/authentication/#',
+      icon: 'ri-dashboard-line',
+      label: 'Authentication',
+      children: [
+        {
+          routerLink: '/authentication/login',
+          icon: '',
+          label: 'Login',
+        },
+        {
+          routerLink: '/authentication/register',
+          icon: '',
+          label: 'Register',
+        },
+      ],
+    },
+    {
+      routerLink: '/error-page/#',
+      icon: 'ri-dashboard-line',
+      label: 'Error Page',
+      children: [
+        {
+          routerLink: '/error-page/404',
+          icon: '',
+          label: '404',
+        },
+        {
+          routerLink: '/error-page/500',
+          icon: '',
+          label: '500',
         },
       ],
     },

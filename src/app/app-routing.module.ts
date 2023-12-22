@@ -36,23 +36,6 @@ const routes: Routes = [
       },
     ],
   },
-  // Export as default route
-  // Exported as const
-  // {
-  //   path: 'tables',
-  //   component: LayoutComponent,
-  //   children: [],
-  // },
-  // {
-  //   path: 'forms',
-  //   component: LayoutComponent,
-  //   children: [],
-  // },
-  // {
-  //   path: 'user',
-  //   component: LayoutComponent,
-  //   children: [],
-  // },
 ];
 
 @NgModule({
