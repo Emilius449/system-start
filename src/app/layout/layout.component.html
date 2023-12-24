@@ -1,4 +1,10 @@
 <app-sidenav (onToggleSidenav)="onToggleSidenav($event)"></app-sidenav>
-<div class="content-wrapper" [ngClass]="{'content-wrapper-full':bodyMdScreenClass}">
+<div class="content-wrapper d-flex flex-column" [ngClass]="{'content-wrapper-full':bodyMdScreenClass}">
     <router-outlet></router-outlet>
+    <footer class="mt-auto">
+        <div class="d-flex justify-content-between">
+            <p>Copyright &copy; {{currentYear}} MfT-lab</p>
+            <p>Handcrafted With </p>
+        </div>
+    </footer>
 </div>

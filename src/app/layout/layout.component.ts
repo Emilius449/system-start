@@ -15,6 +15,7 @@ export class LayoutComponent {
   collapsed = false;
   screenWidth = 0;
   bodyMdScreenClass = false;
+  currentYear = new Date().getFullYear();
   onToggleSidenav(data: SideNavToggle) {
     this.collapsed = data.collapsed;
     this.screenWidth = data.screenWidth;

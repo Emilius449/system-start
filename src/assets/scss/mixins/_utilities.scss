@@ -1,0 +1,8 @@
+// Utility generator
+// Used to generate utilities
+@mixin generate-utility($utility) {
+  $values: map-get($utility, values);
+  @each $key, $value in $values {
+    $properties: map-get($utility, property);
+  }
+}
