@@ -3,7 +3,7 @@
 @use "./form";
 @use "./button";
 @use "./helper";
-@use "./utilities/flex";
+@use "./utilities/utilities";
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
