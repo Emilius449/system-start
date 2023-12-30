@@ -1,0 +1,114 @@
+[
+  {
+    "email": "john.doe@example.com",
+    "name": "John Doe",
+    "header": "Meeting Reminder",
+    "body": "Dear John,\n\nThis is a reminder that our meeting is scheduled for tomorrow at 2 PM. Please make sure to prepare the presentation slides.\n\nBest regards,\nJane Smith",
+    "date": "2023-01-01",
+    "hasAttachment": true
+  },
+  {
+    "email": "jane.smith@example.com",
+    "name": "Jane Smith",
+    "header": "Quarterly Report",
+    "body": "Dear Jane,\n\nAttached is the quarterly report for your review. Please let me know if you have any questions.\n\nRegards,\nJohn Doe",
+    "date": "2023-01-02",
+    "hasAttachment": true
+  },
+  {
+    "email": "robert.johnson@example.com",
+    "name": "Robert Johnson",
+    "header": "Product Launch",
+    "body": "Dear Robert,\n\nWe're excited to announce the launch of our new product. Please find the attached press release for details.\n\nBest,\nEmily Wilson",
+    "date": "2023-01-05",
+    "hasAttachment": true
+  },
+  {
+    "email": "emily.wilson@example.com",
+    "name": "Emily Wilson",
+    "header": "Team Building Event",
+    "body": "Dear Emily,\n\nDon't forget about the team-building event this weekend. Looking forward to seeing you there!\n\nCheers,\nRobert Johnson",
+    "date": "2023-01-07",
+    "hasAttachment": false
+  },
+  {
+    "email": "lisa.brown@example.com",
+    "name": "Lisa Brown",
+    "header": "Vacation Request",
+    "body": "Dear Lisa,\n\nI'd like to request vacation leave from February 10th to February 20th. Please let me know if this is possible.\n\nThanks,\nMichael Davis",
+    "date": "2023-01-10",
+    "hasAttachment": false
+  },
+  {
+    "email": "michael.davis@example.com",
+    "name": "Michael Davis",
+    "header": "Project Update",
+    "body": "Dear Michael,\n\nHere's the latest update on Project X. Please review and let me know if any adjustments are needed.\n\nRegards,\nLisa Brown",
+    "date": "2023-01-12",
+    "hasAttachment": true
+  },
+  {
+    "email": "steve.wilson@example.com",
+    "name": "Steve Wilson",
+    "header": "Training Session",
+    "body": "Dear Steve,\n\nThere will be a training session on January 20th. Please confirm your attendance.\n\nBest,\nKaren Smith",
+    "date": "2023-01-15",
+    "hasAttachment": false
+  },
+  {
+    "email": "karen.smith@example.com",
+    "name": "Karen Smith",
+    "header": "Feedback Request",
+    "body": "Dear Karen,\n\nWe value your feedback. Please take a few minutes to complete our survey.\n\nThank you,\nSteve Wilson",
+    "date": "2023-01-18",
+    "hasAttachment": false
+  },
+  {
+    "email": "david.jones@example.com",
+    "name": "David Jones",
+    "header": "Invoice Due",
+    "body": "Dear David,\n\nThis is a reminder that invoice #12345 is due on January 25th. Please ensure timely payment.\n\nRegards,\nJessica Lee",
+    "date": "2023-01-20",
+    "hasAttachment": false
+  },
+  {
+    "email": "jessica.lee@example.com",
+    "name": "Jessica Lee",
+    "header": "New Feature Announcement",
+    "body": "Dear Jessica,\n\nWe've added some exciting new features to our platform. Check them out!\n\nBest,\nDavid Jones",
+    "date": "2023-01-22",
+    "hasAttachment": true
+  },
+  {
+    "email": "chris.smith@example.com",
+    "name": "Chris Smith",
+    "header": "Meeting Request",
+    "body": "Dear Chris,\n\nI'd like to schedule a meeting to discuss the upcoming project. Please let me know your availability.\n\nRegards,\nJennifer Brown",
+    "date": "2023-01-24",
+    "hasAttachment": false
+  },
+  {
+    "email": "jennifer.brown@example.com",
+    "name": "Jennifer Brown",
+    "header": "Holiday Closure",
+    "body": "Dear Jennifer,\n\nPlease note that our office will be closed on January 31st for the holiday.\n\nBest,\nChris Smith",
+    "date": "2023-01-27",
+    "hasAttachment": false
+  },
+  {
+    "email": "andrew.wilson@example.com",
+    "name": "Andrew Wilson",
+    "header": "Performance Review",
+    "body": "Dear Andrew,\n\nYour performance review is scheduled for February 5th. Please prepare any necessary materials.\n\nRegards,\nSophia Johnson",
+    "date": "2023-01-29",
+    "hasAttachment": false
+  },
+  {
+    "email": "sophia.johnson@example.com",
+    "name": "Sophia Johnson",
+    "header": "Team Meeting Agenda",
+    "body": "Dear Sophia,\n\nAttached is the agenda for our upcoming team meeting on February 8th.\n\nBest,\nAndrew Wilson",
+    "date": "2023-01-31",
+    "hasAttachment": true
+  }
+]

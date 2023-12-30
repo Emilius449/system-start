@@ -1,3 +1,16 @@
-:host {
-  display: block;
+.border-left {
+  border-left: 1px solid var(--mat-divider-color);
+}
+.truckate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-item-title {
+  &::before {
+    height: 0px !important;
+  }
+  &::after {
+    vertical-align: 0px !important;
+  }
 }

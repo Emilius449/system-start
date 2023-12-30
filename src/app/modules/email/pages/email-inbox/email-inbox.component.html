@@ -1,1 +1,66 @@
-<p>email-inbox works!</p>,
+<div class="row">
+    <div class="col-2">
+
+        <h2>Mail Service</h2>
+        <p>
+            <a href="mailto:info@mftechlab.com">info&#64;mftechlab.com</a>
+        </p>
+        <button mat-raised-button color="primary" class="w-100">Compose Email</button>
+        <mat-list>
+            <div mat-subheader>Folders</div>
+            @for (folder of folders; track folder) {
+            <mat-list-item>
+                <mat-icon matListItemIcon>folder</mat-icon>
+                <div matListItemTitle>{{folder.name}}</div>
+            </mat-list-item>
+            }
+            <mat-divider></mat-divider>
+            <div mat-subheader>Labels</div>
+            @for (label of labels; track label) {
+            <mat-list-item>
+                <mat-icon matListItemIcon>note</mat-icon>
+                <div matListItemTitle>{{label.name}}</div>
+            </mat-list-item>
+            }
+        </mat-list>
+    </div>
+    <div class="col-3 border-left">
+        <div>
+
+            <h2>
+                <mat-icon svgIcon="m_tech_mail"></mat-icon>
+                Inbox
+            </h2>
+        </div>
+        <mat-divider></mat-divider>
+        <mat-selection-list [multiple]="false" (selectionChange)="selectionChange($event)"
+            [hideSingleSelectionIndicator]="true">
+            @for (email of emails(); track email) {
+            <mat-list-option lines="3" [value]="email">
+                <div matListItemTitle class="list-item-title text-small">{{email.name}}</div>
+                <div class="d-flex justify-content-between text-small">
+                    <span class="truckate">{{email.header}}</span>
+                    <span>{{email.date | date:'dd/MM/YYYY'}}</span>
+                </div>
+                <span class="text-small">{{email.body}}</span>
+            </mat-list-option>
+            }
+        </mat-selection-list>
+    </div>
+    <div class="col-7 border-left">
+
+        <div class="w-100 d-flex justify-content-between">
+            <h2>
+                <mat-icon svgIcon="m_tech_mail"></mat-icon>
+                Inbox
+            </h2>
+            <div>
+                <p>Search Input</p>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+        Data:
+        {{selectedMail() | json}}
+    </div>
+</div>
