@@ -1,4 +1,4 @@
-import { CommonModule, DatePipe, JsonPipe } from '@angular/common';
+import { CommonModule, DatePipe, JsonPipe, NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule, MatSelectionListChange } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { Email, EmailService } from '../../email.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-email-inbox',
@@ -19,8 +21,11 @@ import { Email, EmailService } from '../../email.service';
     MatButtonModule,
     MatListModule,
     MatDividerModule,
+    MatCardModule,
+    MatToolbarModule,
     DatePipe,
     JsonPipe,
+    NgIf,
   ],
   templateUrl: './email-inbox.component.html',
   styleUrl: './email-inbox.component.scss',

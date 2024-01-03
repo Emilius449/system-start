@@ -89,5 +89,13 @@ export class SvgIconService {
       name: 'm_tech_text_block',
       url: '../../assets/svg/text_block.svg',
     },
+    {
+      name: 'm_tech_arrow_up_left',
+      url: '../../assets/svg/arrow-up-left.svg',
+    },
+    {
+      name: 'm_tech_arrow_up_right',
+      url: '../../assets/svg/arrow-up-right.svg',
+    },
   ];
 }

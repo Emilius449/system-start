@@ -14,3 +14,17 @@ body {
   font-size: var(--fs-small) !important;
   line-height: 15px;
 }
+.mat-icon.icon-size-24 {
+  height: 24px !important;
+  width: 24px !important;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--mat-divider-color);
+}
+.border-left {
+  border-left: 1px solid var(--mat-divider-color);
+}
