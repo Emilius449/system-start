@@ -97,5 +97,13 @@ export class SvgIconService {
       name: 'm_tech_arrow_up_right',
       url: '../../assets/svg/arrow-up-right.svg',
     },
+    {
+      name: 'm_tech_more',
+      url: '../../assets/svg/more.svg',
+    },
+    {
+      name: 'm_tech_delete',
+      url: '../../assets/svg/delete.svg',
+    },
   ];
 }

@@ -1,4 +1,8 @@
+$gray-100: #f8f9fa !default;
+$gray-900: #212529 !default;
 :root {
+  --light: $gray-100;
+  --dark: $gray-900;
   --sidebar-width: 16.5625rem;
   --sidebar-width-collapsed: 5rem;
   --bg-primary: #e53935;

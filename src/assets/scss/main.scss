@@ -28,3 +28,6 @@ body {
 .border-left {
   border-left: 1px solid var(--mat-divider-color);
 }
+.mat-mdc-icon-button.mat-mdc-button-base {
+  padding-top: 6px !important;
+}

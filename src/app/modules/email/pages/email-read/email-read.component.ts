@@ -12,6 +12,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { Email, EmailService } from '../../email.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-email-read',
@@ -26,6 +28,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     DatePipe,
     JsonPipe,
     NgIf,
+    MatMenuModule,
+    MatTooltipModule,
   ],
   templateUrl: './email-read.component.html',
   styleUrl: './email-read.component.scss',

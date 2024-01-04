@@ -229,7 +229,7 @@ See:
 * https://caniuse.com/#feat=css-touch-action
 *  https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
 */
-a,
+/* a,
 area,
 button,
 [role="button"],
@@ -240,7 +240,7 @@ summary,
 textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-}
+} */
 /*
 Tables
 */
@@ -277,10 +277,10 @@ button {
 Work around a Firefox/IE bug where the transparent `button` background results in a loss of the default `button` focus styles.
 Credit: https://github.com/suitcss/base/
 */
-button:focus {
+/* button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
-}
+} */
 input,
 button,
 select,
