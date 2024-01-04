@@ -15,6 +15,6 @@
     </div>
     <div class="carousel-indicators-container" *ngIf="indicators">
         <span class="carousel-indicator text-light" *ngFor="let indicator of images(); index as i"
-            [ngClass]="{'indicator-active':selectedIndex() === i}" (click)="changeIndex(i)">.</span>
+            [ngClass]="{'indicator-active':selectedIndex() === i}" (click)="changeIndex(i)"></span>
     </div>
 </div>

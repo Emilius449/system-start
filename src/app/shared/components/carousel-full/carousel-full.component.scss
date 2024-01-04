@@ -22,7 +22,7 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--light);
+    color: var(--color-light);
   }
   .carousel-indicators-container {
     position: absolute;
@@ -33,16 +33,17 @@
     justify-content: center;
     gap: 10px;
     .carousel-indicator {
+      display: block;
       cursor: pointer;
       width: 16px;
       height: 16px;
-      background-color: var(--dark);
+      background-color: var(--color-dark);
       border-radius: 50%;
       transition: all 0.6s ease;
       &.indicator-active,
       &:hover {
         opacity: 1;
-        background-color: var(--light);
+        background-color: var(--color-light);
       }
     }
   }
@@ -59,7 +60,7 @@
       right: 0;
     }
     .carousel-btn {
-      background-color: var(--light);
+      background-color: var(--color-light);
       opacity: 0.5;
       outline: none;
       width: 48px;
@@ -73,7 +74,7 @@
       }
       &.carousel-btn-prev,
       &.carousel-btn-next {
-        color: var(--dark);
+        color: var(--color-dark);
       }
     }
   }
