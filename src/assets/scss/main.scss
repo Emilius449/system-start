@@ -31,3 +31,30 @@ body {
 .mat-mdc-icon-button.mat-mdc-button-base {
   padding-top: 6px !important;
 }
+
+// ** == The styles to control the appearance of the notifications == ** //
+.mdc-snackbar {
+  &.notification-success {
+    --mdc-snackbar-container-color: #078928;
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
+
+  &.notification-info {
+    --mdc-snackbar-container-color: #2196f3;
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
+
+  &.notification-warn {
+    --mdc-snackbar-container-color: #ffde03;
+    --mat-mdc-snack-bar-button-color: #000000;
+    --mdc-snackbar-supporting-text-color: #000000;
+  }
+
+  &.notification-error {
+    --mdc-snackbar-container-color: #dc3545;
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
+}

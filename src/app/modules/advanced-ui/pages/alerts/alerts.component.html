@@ -1,1 +1,6 @@
-<p>alerts works!</p>,
+<h3>Angular Material Snackbar Alerts</h3>
+<button mat-stroked-button class="me-3" (click)="openSnackBar()">Open Default</button>
+<button mat-stroked-button class="me-3" (click)="openSnackBar('success')" color="primary">Open Success</button>
+<button mat-stroked-button class="me-3" (click)="openSnackBar('error')" color="warn">Open Error</button>
+<button mat-stroked-button class="me-3" (click)="openSnackBar('warn')">Open Warn</button>
+<button mat-stroked-button class="me-3" (click)="openSnackBar('info')" color="accent">Open Info</button>

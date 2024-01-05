@@ -34,11 +34,13 @@ export class CarouselFullComponent implements OnChanges, OnDestroy {
   images = signal<CarouselImage[]>([]);
 
   ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    if (changes?.['autoSlide']) {
+    if (changes?.['autoSlide'].currentValue) {
       this.onAutoSlide();
     }
-    if (changes?.['slideInterval'] && changes?.['autoSlide'].currentValue) {
+    if (
+      changes?.['slideInterval']?.currentValue &&
+      changes?.['autoSlide'].currentValue
+    ) {
       this.onAutoSlide();
     }
     if (changes?.['carouselImage'].currentValue) {
