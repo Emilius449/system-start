@@ -1,6 +1,14 @@
-<h3>Angular Material Snackbar Alerts</h3>
-<button mat-stroked-button class="me-3" (click)="openSnackBar()">Open Default</button>
-<button mat-stroked-button class="me-3" (click)="openSnackBar('success')" color="primary">Open Success</button>
-<button mat-stroked-button class="me-3" (click)="openSnackBar('error')" color="warn">Open Error</button>
-<button mat-stroked-button class="me-3" (click)="openSnackBar('warn')">Open Warn</button>
-<button mat-stroked-button class="me-3" (click)="openSnackBar('info')" color="accent">Open Info</button>
+<div class="d-flex flex-column justify-content-between">
+    <div>
+        <h3>Angular Material Snackbar Based Alerts</h3>
+        <button mat-stroked-button class="me-3" (click)="openSnackBar()">Open Default</button>
+        <button mat-stroked-button class="me-3" (click)="openSnackBar('success')" color="primary">Open Success</button>
+        <button mat-stroked-button class="me-3" (click)="openSnackBar('error')" color="warn">Open Error</button>
+        <button mat-stroked-button class="me-3" (click)="openSnackBar('warn')">Open Warn</button>
+        <button mat-stroked-button class="me-3" (click)="openSnackBar('info')" color="accent">Open Info</button>
+    </div>
+    <div class="mt-5">
+        <h3>Angular Material Dialog Based Alerts</h3>
+        <button mat-stroked-button class="me-3" (click)="openDialog()">Action Completed</button>
+    </div>
+</div>

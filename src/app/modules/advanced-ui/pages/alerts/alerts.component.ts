@@ -5,6 +5,7 @@ import {
   NotificationService,
   NotificationType,
 } from 'src/app/shared/service/notification.service';
+import { NotificationDialog } from 'src/app/shared/types/notification-dialog.type';
 
 @Component({
   selector: 'app-alerts',
@@ -35,5 +36,13 @@ export class AlertsComponent {
         this.notificationService.onOpenSnackBar('Open default notification');
         break;
     }
+  }
+
+  openDialog() {
+    const sss: NotificationDialog = {
+      title: 'Booking Completed!',
+      message: `Use this booking reference to manage your booking: 1234567`,
+    };
+    this.notificationService.onOpenDialog(sss);
   }
 }

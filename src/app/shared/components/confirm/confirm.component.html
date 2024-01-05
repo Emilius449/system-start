@@ -1,0 +1,24 @@
+<div class="notification-dialog p-3">
+    <img [src]="data?.imgSrc ?? '/assets/images/tick.png'" alt="Image">
+    <h3 class="text-center">{{data.title}}</h3>
+    @if (data?.subTitle) {
+    <p class="text-center">{{data.subTitle}}</p>
+    }
+    <p class="text-center">{{data?.message}}</p>
+    @if (data?.confirmText) {
+    <ng-container>
+        <div class="action d-flex justify-content-between">
+            <button mat-raised-button color="primary" class="w-100 me-1" (click)="onConfirm()">{{data?.confirmText ??
+                'Yes'}}</button>
+            <button mat-raised-button color="warn" class="w-100 ms-1" (click)="onClose()">{{data?.cancelText ??
+                'Close'}}</button>
+        </div>
+    </ng-container>
+    } @else {
+    <div class="action">
+        <button mat-raised-button color="primary" class="w-100" (click)="onClose()">{{data?.completeText ??
+            'Done'}}</button>
+    </div>
+    }
+
+</div>
