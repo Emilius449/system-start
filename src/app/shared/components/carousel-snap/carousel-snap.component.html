@@ -1,0 +1,12 @@
+<div class="slider-container">
+    <button class="prev-btn" (click)="scrollPrev()">‹</button>
+    <div #slider class="slider snaps-inline" (scroll)="onScroll()">
+        @for (item of dublicateList; track $index) {
+        <div class="slider-card" [ngClass]="{'bg-primary111':item.isDuplicate}">
+            <img [src]="item.imageSrc" [alt]="item.acronym">
+            <div class="acronym">{{ item.acronym }}</div>
+        </div>
+        }
+    </div>
+    <button class="next-btn" (click)="scrollNext()">›</button>
+</div>

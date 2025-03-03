@@ -1,0 +1,125 @@
+.slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 280px;
+  gap: 24px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  /* Hide scrollbar for Webkit browsers (e.g., Chrome, Safari) */
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer */
+  &.no-transition {
+    scroll-behavior: auto;
+  }
+  &::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
+  .slider-card {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: 8px;
+    background-color: var(--primary-light);
+    border-radius: 12px;
+    &.bg-primary {
+      background-color: var(--primary);
+    }
+    img {
+      inline-size: 100%;
+      aspect-ratio: 16 / 16;
+      object-fit: cover;
+    }
+
+    .acronym {
+      font-weight: bold;
+      text-align: center;
+      padding: 12px;
+    }
+  }
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 24px;
+  > * {
+    scroll-snap-align: start;
+  }
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  z-index: 1;
+  background: var(--primary-light);
+  border: none;
+  color: var(--primary-dark);
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--box-shadow);
+}
+
+.prev-btn {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.next-btn {
+  right: 0;
+  transform: translateX(50%);
+}
+
+/* 
+  .slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow: hidden;
+    :where(.slider-card, .slider-card-image) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slider-card {
+      background-color: var(--primary-light);
+      border-radius: 12px;
+      height: 342px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 16px;
+      cursor: pointer;
+      .slider-card-image {
+        width: 148px;
+        height: 148px;
+        background-color: var(--primary);
+        // padding: 4px;
+        border-radius: 50%;
+        img {
+          width: 140px;
+          height: 140px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 3px solid var(--primary-light);
+        }
+      }
+      .slider-card-content {
+        text-align: center;
+      }
+    }
+  }
+*/
